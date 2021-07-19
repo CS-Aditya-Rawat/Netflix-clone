@@ -9,6 +9,7 @@ import {
   Link,
   Input,
   Submit,
+  DemoLogin,
 } from "./styles/form";
 
 export default function Form({ children, ...restPtops }) {
@@ -45,4 +46,8 @@ Form.Input = function FormInput({ children, ...restPtops }) {
 
 Form.Submit = function FormSubmit({ children, ...restPtops }) {
   return <Submit {...restPtops}>{children}</Submit>;
+};
+
+Form.DemoLogin = function FormDemoLogin({ children, ...restPtops }) {
+  return <DemoLogin {...restPtops}>{children}</DemoLogin>;
 };

@@ -15,6 +15,19 @@ export default function Signin() {
 
   const isInvalid = password === "" || emailAddress === "";
 
+  const demoSignin = (e) => {
+    e.preventDefault();
+
+    firebase
+      .auth()
+      .signInWithEmailAndPassword("aditya@gmail.com", "123456")
+      .then(() => {
+        history.push(ROUTES.BROWSE);
+      })
+      .catch((error) => {
+        setError(error.message);
+      });
+  };
   const handleSignin = (event) => {
     event.preventDefault();
 
@@ -53,6 +66,7 @@ export default function Signin() {
             <Form.Submit disabled={isInvalid} type="submit">
               Sign In
             </Form.Submit>
+            <Form.DemoLogin onClick={demoSignin}>Demo Login</Form.DemoLogin>
           </Form.Base>
 
           <Form.Text>

@@ -90,3 +90,20 @@ export const Submit = styled.button`
     opacity: 0.5;
   }
 `;
+
+export const DemoLogin = styled.button`
+  background: #e50914;
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: bold;
+  margin: 12px 0 12px;
+  padding: 16px 5px 16px;
+  border: 0;
+  color: white;
+  cursor: pointer;
+  opacity: 0.5;
+
+  &:hover {
+    opacity: 1;
+  }
+`;
